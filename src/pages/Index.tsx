@@ -64,7 +64,7 @@ const Index = () => {
               custom={1}
               className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-primary-foreground mb-6">
               
-              Communities & Transforming Lives in Afghanistan
+               NOIA Afghanistan
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-lg md:text-xl text-primary-foreground/85 mb-8 max-w-xl">
               NOIA is dedicated to creating lasting change through education, community development,
