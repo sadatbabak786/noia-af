@@ -1,40 +1,50 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Users, MapPin, Briefcase, ArrowRight } from "lucide-react";
+import { TrendingUp, Users, MapPin, Briefcase, ArrowRight, Heart } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/layout/PageHero";
 
 const impactStats = [
-  { icon: Users, value: "150,000+", label: "Direct Beneficiaries" },
-  { icon: MapPin, value: "18", label: "Provinces Covered" },
-  { icon: Briefcase, value: "85+", label: "Projects Completed" },
-  { icon: TrendingUp, value: "14", label: "Years of Impact" },
+  { icon: Users, value: "50,835+", label: "Direct Beneficiaries" },
+  { icon: MapPin, value: "8", label: "Provinces Covered" },
+  { icon: Heart, value: "62%", label: "Women & Girls Served" },
+  { icon: TrendingUp, value: "7", label: "Years of Impact" },
+];
+
+const regionalImpact = [
+  { region: "Kabul", years: "2018 - Present", beneficiaries: "12,000", percentage: "23.6%" },
+  { region: "Farah", years: "2023 - Present", beneficiaries: "9,835", percentage: "19.4%" },
+  { region: "Nangarhar", years: "2019 - 2021", beneficiaries: "8,500", percentage: "16.7%" },
+  { region: "Kunar", years: "2020 - 2022", beneficiaries: "6,800", percentage: "13.4%" },
+  { region: "Laghman", years: "2021 - 2023", beneficiaries: "5,200", percentage: "10.2%" },
+  { region: "Kapisa", years: "2018 - 2019", beneficiaries: "4,500", percentage: "8.9%" },
+  { region: "Parwan", years: "2018 - 2020", beneficiaries: "4,000", percentage: "7.9%" },
 ];
 
 const caseStudies = [
   {
-    title: "Transforming Education in Bamyan",
-    before: "Only 30% of girls in the district had access to education. Schools lacked trained teachers and materials.",
-    after: "Girl enrollment increased to 78%. 50 new community-based schools established with trained local teachers.",
-    outcome: "3,000+ girls now attending school regularly with improved learning outcomes."
-  },
-  {
-    title: "Clean Water for Dasht-e-Barchi",
-    before: "Community relied on contaminated water sources. Waterborne diseases were common, especially among children.",
-    after: "15 deep wells and 3 water treatment systems installed. Community water management committees established.",
-    outcome: "Waterborne disease reduced by 65%. 8,000+ people now have access to clean drinking water."
+    title: "Women-Led Crisis Response in Nangarhar",
+    before: "Women had no participation in crisis management or decision-making. Disaster response lacked gender-sensitivity.",
+    after: "50+ women trained in leadership and disaster response. Women-Led Crisis Response Network established across multiple villages.",
+    outcome: "70% of aid reached women and children. Response times reduced by 40%. Network expanded to 3 additional villages by end of 2024."
   },
   {
     title: "Women's Economic Empowerment in Herat",
-    before: "Women had limited economic opportunities. Most families relied on single male income.",
-    after: "500+ women trained in vocational skills. 120 micro-enterprises launched with seed funding support.",
-    outcome: "Average household income increased by 40%. Women report greater decision-making power."
+    before: "Women had limited economic opportunities. Most families relied on single male income with no financial literacy.",
+    after: "Skills development and financial literacy programs enabled women to pursue economic independence and entrepreneurship.",
+    outcome: "40% increase in women assuming leadership roles. 30% rise in economic independence. Women now lead community governance."
+  },
+  {
+    title: "Reforestation in Paktia Province",
+    before: "Widespread deforestation, soil erosion, and poor air quality. Community members lacked environmental awareness.",
+    after: "40,000 trees planted. 50 community members employed. Educational workshops conducted on sustainable forestry.",
+    outcome: "30 participants continue active tree care. Increased local resilience to climate change and long-term environmental stewardship."
   },
 ];
 
 const stories = [
-  { name: "Zahra, 14", location: "Bamyan", story: "I was the first girl in my family to attend school thanks to NOIA's program. Now I dream of becoming a doctor to help my community. My younger sisters are following my path." },
-  { name: "Ahmad, 45", location: "Herat", story: "After the earthquake destroyed our home, NOIA was the first to respond. They provided us with shelter, food, and helped us rebuild. We are forever grateful." },
-  { name: "Nasreen, 30", location: "Kabul", story: "The tailoring training changed my life. I now earn enough to support my three children and even employ two other women from my neighborhood." },
+  { name: "Amina, 32", location: "Nangarhar", story: "Initially hesitant due to societal stigma, my confidence grew through NOIA's training. When floods struck, I coordinated relief efforts, mobilizing women to establish temporary shelters and distribute supplies. Under our leadership, 70% of aid reached women and children." },
+  { name: "Shabana, 15", location: "Parwan", story: "I faced early marriage at 14, but NOIA's advocacy reached my parents. Through Community Learning Circles, I found a safe space to explore my potential. I'm now continuing my education and dreaming of a different future." },
+  { name: "Nabi Jan", location: "Paktia", story: "These trees not only brought shade and cleaner air, but they also gave me a job and hope for my children's future. The reforestation project changed our community." },
 ];
 
 const Impact = () => {
@@ -42,7 +52,7 @@ const Impact = () => {
     <Layout>
       <PageHero
         title="Our Impact"
-        subtitle="Measurable results and lasting change across Afghanistan."
+        subtitle="Measurable results and lasting change across Afghanistan since 2018."
       />
 
       {/* Stats */}
@@ -67,8 +77,40 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Case Studies */}
+      {/* Regional Impact Table */}
       <section className="section-padding section-alt">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-heading font-bold text-foreground mb-10 text-center">Beneficiaries by Region</h2>
+          <div className="rounded-xl bg-card shadow-md border border-border/30 overflow-hidden">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-primary/5 border-b border-border">
+                  <th className="text-left p-4 font-heading font-bold text-foreground text-sm">Region</th>
+                  <th className="text-left p-4 font-heading font-bold text-foreground text-sm">Years</th>
+                  <th className="text-right p-4 font-heading font-bold text-foreground text-sm">Beneficiaries</th>
+                  <th className="text-right p-4 font-heading font-bold text-foreground text-sm">% of Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {regionalImpact.map((r) => (
+                  <tr key={r.region} className="border-b border-border/30 hover:bg-muted/30 transition-colors">
+                    <td className="p-4 font-medium text-foreground text-sm">{r.region}</td>
+                    <td className="p-4 text-muted-foreground text-sm">{r.years}</td>
+                    <td className="p-4 text-right font-semibold text-primary text-sm">{r.beneficiaries}</td>
+                    <td className="p-4 text-right text-muted-foreground text-sm">{r.percentage}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-4">
+            73.3% of total beneficiaries are in rural areas, with 26.7% in urban centers (Kabul and Farah).
+          </p>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="section-padding">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-heading font-bold text-foreground mb-10 text-center">Case Studies</h2>
           <div className="space-y-8">
@@ -103,7 +145,7 @@ const Impact = () => {
       </section>
 
       {/* Stories */}
-      <section className="section-padding">
+      <section className="section-padding section-alt">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-heading font-bold text-foreground mb-10 text-center">Beneficiary Stories</h2>
           <div className="grid md:grid-cols-3 gap-6">

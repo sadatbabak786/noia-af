@@ -12,7 +12,7 @@ const Footer = () => {
             <h3 className="mb-4 text-xl font-heading font-bold">NOIA</h3>
             <p className="mb-4 text-sm text-primary-foreground/80">
               National Organization of Initiative & Action — empowering Afghan communities
-              through sustainable development, education, and humanitarian assistance since 2010.
+              through sustainable development, women's leadership, and humanitarian assistance since 2018.
             </p>
             <div className="flex gap-3">
               {[Facebook, Twitter, Linkedin, Youtube].map((Icon, i) => (
@@ -50,15 +50,15 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-                Kabul, Afghanistan
+                House# 46, 5th Street, Qala-E-Fathullah, Near Golden Palace, Kabul, Afghanistan
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0" />
-                +93 (0) 70 123 4567
+                +93 744 996 996
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0" />
-                info@noia.org.af
+                kabul@noia-af.org
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@ const Footer = () => {
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-xs text-primary-foreground/60">
           <p>© {new Date().getFullYear()} National Organization of Initiative & Action (NOIA). All rights reserved.</p>
-          <p className="mt-1">Registered NGO — License No. 4521 | Kabul, Afghanistan</p>
+          <p className="mt-1">www.noia-af.org | Kabul, Afghanistan</p>
         </div>
       </div>
     </footer>
