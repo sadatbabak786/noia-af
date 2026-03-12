@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Heart, Users, Globe, BookOpen, Shield, HandHelping, ArrowRight, Mail, CheckCircle, Quote } from "lucide-react";
+import { Heart, Users, Globe, BookOpen, Shield, HandHelping, ArrowRight, Mail, CheckCircle, Quote, TreePine, Baby } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Layout from "@/components/layout/Layout";
@@ -21,25 +21,25 @@ const fadeUp = {
 };
 
 const stats = [
-{ icon: Users, value: "150,000+", label: "Beneficiaries Reached" },
-{ icon: Globe, value: "18", label: "Provinces Served" },
-{ icon: BookOpen, value: "85+", label: "Projects Implemented" },
-{ icon: Shield, value: "14", label: "Years of Service" }];
-
+  { icon: Users, value: "50,835+", label: "Beneficiaries Reached" },
+  { icon: Globe, value: "8", label: "Provinces Served" },
+  { icon: BookOpen, value: "62%", label: "Women & Girls Served" },
+  { icon: Shield, value: "7", label: "Years of Service" },
+];
 
 const programs = [
-{ title: "Education Programs", desc: "Providing quality education and literacy programs to underserved communities.", img: educationImg, link: "/programs" },
-{ title: "Community Development", desc: "Building infrastructure and strengthening local governance.", img: communityImg, link: "/programs" },
-{ title: "Emergency Response", desc: "Rapid humanitarian assistance during natural disasters and crises.", img: emergencyImg, link: "/programs" },
-{ title: "Women Empowerment", desc: "Skills training, economic opportunities, and advocacy for women's rights.", img: womenImg, link: "/programs" },
-{ title: "Child Protection", desc: "Creating safe spaces and support systems for vulnerable children.", img: childImg, link: "/programs" }];
-
+  { title: "Women's Empowerment & Leadership", desc: "Fostering women's leadership in crisis management, advocacy, and economic resilience with 50+ women-led networks.", img: womenImg, link: "/programs" },
+  { title: "Crisis Response & Protection", desc: "Community-driven crisis response integrating gender-sensitive strategies and localized leadership.", img: emergencyImg, link: "/programs" },
+  { title: "Child Protection & Development", desc: "Trauma-informed psychosocial support, education access, and health interventions for vulnerable children.", img: childImg, link: "/programs" },
+  { title: "Health & Nutrition", desc: "Maternal health programs, vaccination campaigns, and nutritional support for women and children.", img: communityImg, link: "/programs" },
+  { title: "Environmental & Wildlife Protection", desc: "Conservation of endangered species, reforestation efforts, and community-centered environmental stewardship.", img: educationImg, link: "/programs" },
+];
 
 const testimonials = [
-{ quote: "Thanks to NOIA's education program, my children now have access to quality schooling. Our community has been transformed.", name: "Fatima H.", role: "Beneficiary, Bamyan Province" },
-{ quote: "NOIA's emergency response team was the first to arrive after the earthquake. Their swift action saved many lives in our village.", name: "Ahmad K.", role: "Community Elder, Herat Province" },
-{ quote: "The women's empowerment program gave me the skills and confidence to start my own tailoring business and support my family.", name: "Mariam S.", role: "Program Graduate, Kabul" }];
-
+  { quote: "Empowering Afghan women is not merely about addressing immediate needs; it is about laying the foundation for generational change. Witnessing women lead relief operations and challenge deeply rooted norms has been profoundly inspiring.", name: "Mrs. Arezoo Rasikh", role: "Gender Specialist, NOIA" },
+  { quote: "These trees not only brought shade and cleaner air, but they also gave me a job and hope for my children's future.", name: "Nabi Jan", role: "Local Worker, Paktia Reforestation Project" },
+  { quote: "Before NOIA's awareness sessions, we didn't realize how important these animals are to our environment. Now, we protect them instead of hunting them.", name: "Mirza Gul", role: "Community Elder, Pamir, Badakhshan" },
+];
 
 const partners = ["UNICEF", "UNDP", "WHO", "USAID", "EU", "GIZ", "JICA", "WFP"];
 
@@ -57,18 +57,16 @@ const Index = () => {
             className="max-w-2xl">
             
             <motion.div variants={fadeUp} custom={0} className="trust-badge mb-6">
-              <CheckCircle className="h-4 w-4" /> Trusted by International Partners
+              <CheckCircle className="h-4 w-4" /> Committed to Community Empowerment Since 2018
             </motion.div>
             <motion.h1
               variants={fadeUp}
               custom={1}
               className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-primary-foreground mb-6">
-              
-               NOIA Afghanistan
+              Empowering Communities, Transforming Lives
             </motion.h1>
-            <motion.p variants={fadeUp} custom={2} className="text-lg md:text-xl text-primary-foreground/85 mb-8 max-w-xl">National Organization of Initiative & Action (NOIA) is dedicated to creating lasting change through education, community development, and humanitarian assistance across Afghanistan.
-
-
+            <motion.p variants={fadeUp} custom={2} className="text-lg md:text-xl text-primary-foreground/85 mb-8 max-w-xl">
+              The National Organization of Initiative & Action (NOIA) is dedicated to empowering Afghan communities by advancing women's leadership, fostering sustainable development, and protecting human rights across Afghanistan.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex flex-wrap gap-4">
               <Link to="/donate">
@@ -103,7 +101,6 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className="stat-card">
-              
                 <stat.icon className="mx-auto mb-3 h-8 w-8 text-secondary" />
                 <div className="text-3xl font-heading font-bold text-primary">{stat.value}</div>
                 <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
@@ -120,10 +117,7 @@ const Index = () => {
             Who We Are
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            The National Organization of Initiative & Action (NOIA) is an Afghan-led, non-governmental
-            organization committed to sustainable development and humanitarian response. Since 2010,
-            we have been working alongside communities to build resilience, promote education, and
-            create opportunities for vulnerable populations across Afghanistan.
+            The National Organization of Initiative & Action (NOIA) was founded in November 2018 by a dynamic group of young Afghan women and men united by a shared passion for justice, democracy, and equality. NOIA stands as a modern NGO—an evolving body that seeks to connect the world with those who are often left unheard. Over 7 years, NOIA has reached 50,835 individuals, with 62% women and girls, addressing critical issues through evidence-based programs.
           </p>
           <Link to="/about">
             <Button variant="outline" className="gap-2">
@@ -138,10 +132,10 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Our Programs
+              Our Core Focus Areas
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We implement comprehensive programs that address the most pressing needs of Afghan communities.
+              NOIA's strategic focus prioritizes empowering children, women, and marginalized groups through innovative, evidence-based solutions that address systemic inequalities and crises.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -153,7 +147,6 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className="program-card">
-              
                 <img src={program.img} alt={program.title} className="h-48 w-full object-cover" />
                 <div className="p-6">
                   <h3 className="text-lg font-heading font-bold text-foreground mb-2">{program.title}</h3>
@@ -183,7 +176,6 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
               className="rounded-xl bg-card p-6 shadow-md border border-border/40">
-              
                 <Quote className="h-8 w-8 text-secondary/40 mb-4" />
                 <p className="text-foreground/80 italic mb-6">"{t.quote}"</p>
                 <div>
@@ -240,8 +232,8 @@ const Index = () => {
           </Link>
         </div>
       </section>
-    </Layout>);
-
+    </Layout>
+  );
 };
 
 export default Index;
