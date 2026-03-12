@@ -66,9 +66,9 @@ const Index = () => {
               
                NOIA Afghanistan
             </motion.h1>
-            <motion.p variants={fadeUp} custom={2} className="text-lg md:text-xl text-primary-foreground/85 mb-8 max-w-xl">
-              NOIA is dedicated to creating lasting change through education, community development,
-              and humanitarian assistance across Afghanistan.
+            <motion.p variants={fadeUp} custom={2} className="text-lg md:text-xl text-primary-foreground/85 mb-8 max-w-xl">National Organization of Initiative & Action (NOIA) is dedicated to creating lasting change through education, community development, and humanitarian assistance across Afghanistan.
+
+
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex flex-wrap gap-4">
               <Link to="/donate">
